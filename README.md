@@ -1,75 +1,127 @@
+<div align="center">
+
+<img src="public/icon-192.png" width="80" alt="Personal OS logo" />
+
 # Personal OS
 
-A bilingual (中文 / English) personal dashboard for tasks, projects, focus sessions, learning, goals and weekly review. Built with Next.js; all data stays in your own browser.
+**A calm, bilingual command center for your tasks, projects, focus time and personal growth.**
 
-一个中英双语的个人工作台：任务、项目、专注计时、学习记录、目标与每周复盘。基于 Next.js，所有数据只保存在你自己的浏览器里。
+All your data stays on your own device. No account, no server, no tracking.
 
-## Features · 功能
+[中文说明](README.zh-CN.md) · [User guide](docs/user-guide.md) · [Deployment](docs/deployment.md) · [Changelog](CHANGELOG.md)
 
-- **Dashboard 仪表盘** – today's tasks, current focus with timer, schedule, active projects, reminders
-- **Tasks & Projects 任务与项目** – quick add, milestones, priorities, progress, archive
-- **Calendar 日历** – month / week / day views; add a task to any day with one click
-- **Growth 成长** – skills, learning log, long-term goals
-- **Review 复盘** – weekly review and 7-day analytics
-- **Backup 备份** – export / import JSON, reset with undo
-- **Fast to use 顺手** – `⌘K` command palette, `N` for a new task, `⌘Enter` to save, undo after every delete
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/supermemeseveryday-star/personal-os)
+[![CI](https://github.com/supermemeseveryday-star/personal-os/actions/workflows/ci.yml/badge.svg)](https://github.com/supermemeseveryday-star/personal-os/actions/workflows/ci.yml)
+![License: MIT](https://img.shields.io/badge/license-MIT-blue)
 
-It starts completely empty. A short getting-started guide on the dashboard walks you through adding your name, first project and first task.
+<img src="docs/screenshots/today.png" alt="Personal OS dashboard showing today's tasks and schedule" width="100%" />
 
-首次打开时没有任何示例数据，仪表盘上的引导会带你填写名字、创建第一个项目和第一个任务。
+</div>
 
-## Install as an app · 安装为应用
+## What is it?
 
-Personal OS is a Progressive Web App. After deploying, open the site and:
+Personal OS is a web app that works like a native app. It brings together the things you usually keep in five different tools: a to-do list, a project board, a calendar, a focus timer and a learning journal, and connects them so your daily work rolls up into the goals you care about.
 
-- **Chrome / Edge (Windows, Mac, Android)**: click the install icon in the address bar, or **Settings → Install app** inside Personal OS.
-- **iPhone / iPad (Safari)**: Share → **Add to Home Screen**.
-- **Safari on Mac**: File → **Add to Dock**.
+It is designed for one person. Everyone who opens the site gets their **own private, empty workspace** stored in their browser, so you can publish it once and share the link with anyone.
 
-It then opens in its own window without browser bars, works offline, and long-pressing (or right-clicking) the app icon offers shortcuts: **New task**, **Calendar**, **Log learning**.
+## Features
 
-部署后打开网站即可安装：Chrome / Edge 点地址栏的安装图标（或在 **设置 → 安装应用**）；iPhone 用 Safari 的「分享 → 添加到主屏幕」；Mac 上的 Safari 用「文件 → 添加到程序坞」。安装后会以独立窗口打开、可离线使用，长按（或右键）图标可直接「新建任务」「日历」「记录学习」。
+| | |
+|---|---|
+| **Dashboard** | Today's tasks, what to focus on next, today's schedule, active projects, reminders and time invested this week. |
+| **Tasks** | Quick add (type and press Enter), priorities, due dates, tags, estimates. Overdue items turn red. |
+| **Projects** | Progress bars, milestones, notes and linked skills. Archive and restore. |
+| **Focus timer** | Start focus on any task. The timer keeps running in the header while you work elsewhere, and each session is logged. |
+| **Calendar** | Month, week and day views of tasks, reminders, milestones and sessions. Add a task to any day with one click. |
+| **Growth** | Track skills (0–100), log learning sessions and set long-term goals linked to projects and skills. |
+| **Review** | A weekly review page and 7-day analytics for completed tasks and focus time. |
+| **Bilingual** | Full Chinese and English interface. Switch any time. |
+| **Installable app** | Add it to your desktop or home screen. Opens in its own window, works offline, and offers shortcuts (New task, Calendar, Log learning) from the app icon. |
+| **Keyboard first** | `⌘K` command palette, `N` new task, `⌘Enter` save, `←` `→` switch pages. |
+| **Safe by default** | Every delete can be undone. Export and import JSON backups at any time. |
 
-## Run locally · 本地运行
+## Screenshots
 
-Requires Node.js 22 or newer.
+The app starts empty. These screenshots show it after someone has added their own tasks and projects.
+
+| Dashboard | Projects |
+|---|---|
+| ![Dashboard](docs/screenshots/dashboard.png) | ![Projects](docs/screenshots/projects.png) |
+| **Calendar** | **Chinese interface** |
+| ![Calendar](docs/screenshots/calendar.png) | ![Dashboard in Chinese](docs/screenshots/dashboard-zh.png) |
+
+<p align="center">
+  <img src="docs/screenshots/mobile-dashboard-zh.png" width="260" alt="Mobile dashboard" />
+  &nbsp;&nbsp;
+  <img src="docs/screenshots/mobile-tasks-zh.png" width="260" alt="Mobile tasks" />
+</p>
+
+## Quick start
+
+**Use it online:** deploy your own copy with the **Deploy with Vercel** button above (free, about one minute), then open the link.
+
+**Run it on your computer** (requires [Node.js](https://nodejs.org) 22 or newer):
 
 ```bash
+git clone https://github.com/supermemeseveryday-star/personal-os.git
+cd personal-os
 npm install
 npm run dev
 ```
 
-Open http://localhost:3000.
+Open http://localhost:3000. The workspace starts empty, and a short guide on the dashboard walks you through your first project and task.
 
-## Deploy · 部署
+## Install as an app
 
-The app is a standard Next.js project with no database and no environment variables.
+| Device | How |
+|---|---|
+| Chrome / Edge (Windows, macOS, Android) | Click **Install app** in the header, or the install icon in the address bar |
+| iPhone / iPad | Open in Safari → Share → **Add to Home Screen** |
+| Safari on macOS | File → **Add to Dock** |
 
-- **Vercel**: import the GitHub repository at [vercel.com/new](https://vercel.com/new). The framework preset is detected automatically (Next.js); keep the default build settings.
-- **Anywhere else**: `npm run build` then `npm start`.
+On iPhone, install it before you start adding records: Safari and the home-screen app keep separate storage.
 
-## Your data · 数据说明
+## Where is my data?
 
-Data is saved in the browser's `localStorage` under the key `personal-os-state-v1`. Each browser and device has its own copy, and clearing site data removes it. Use **Settings → Export data** to keep regular backups and **Import data** to restore them or move to another device.
+- Everything is saved in your browser's `localStorage` on **this device only**. Nothing is sent to a server, and the site owner cannot see it.
+- Each browser and device has its own workspace. To move data, use **Settings → Export data** on the old device and **Import data** on the new one.
+- Clearing site data or uninstalling the app deletes your records, so export a backup now and then.
 
-数据保存在浏览器的 `localStorage` 中，不同浏览器/设备之间不会同步，清除网站数据会删除记录。请在 **设置 → 导出数据** 定期备份，需要时用 **导入数据** 恢复或迁移。
+## Documentation
 
-## Project structure · 目录结构
+- [User guide](docs/user-guide.md): every page and feature explained
+- [Deployment guide](docs/deployment.md): Vercel, other hosts, custom domains
+- [Contributing](CONTRIBUTING.md): how to report bugs and propose changes
+
+## Built with
+
+[Next.js](https://nextjs.org) 16 · [React](https://react.dev) 19 · TypeScript · [Tailwind CSS](https://tailwindcss.com) 4 · [Radix UI](https://www.radix-ui.com) · [cmdk](https://cmdk.paco.me) · [Lucide](https://lucide.dev) icons
+
+## Project structure
 
 ```
-app/                 Next.js routes, global styles
+app/                      Next.js routes, global styles, web app manifest
 components/
-  personal-os.tsx    The whole application UI
-  page-deck.tsx      Paged content area with keyboard / swipe navigation
-  ui/                shadcn/ui primitives (dialog, command palette, checkbox)
+  personal-os.tsx         The application UI (pages, forms, focus timer, toasts)
+  page-deck.tsx           Paged content area with keyboard and swipe navigation
+  ui/                     shadcn/ui primitives: dialog, command palette, checkbox
 lib/
-  model.ts           Data types and date helpers (uses the viewer's local time zone)
-  storage.ts         localStorage load / save
-  i18n.ts            Chinese translations for interface text
+  model.ts                Data types and date helpers (viewer's local time zone)
+  storage.ts              Load and save to localStorage
+  i18n.ts                 Chinese translations of interface text
+public/                   App icons and the offline service worker (sw.js)
+docs/                     User guide, deployment guide, screenshots
 ```
 
-## License · 许可证
+## Scripts
 
-[MIT](LICENSE). Free to use, modify and share; please keep the copyright notice.
+| Command | What it does |
+|---|---|
+| `npm run dev` | Start the development server |
+| `npm run build` | Build for production |
+| `npm start` | Run the production build |
+| `npm run typecheck` | Check TypeScript types |
 
-MIT 协议：可以自由使用、修改和分发，请保留版权声明。
+## License
+
+[MIT](LICENSE). Free to use, modify and share. Please keep the copyright notice.

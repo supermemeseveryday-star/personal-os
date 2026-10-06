@@ -1406,7 +1406,12 @@ export default function PersonalOS() {
                     <span>{e.title}</span>
                     <small>
                       {e.kind === "milestone" ? tr("Milestone") : timeOf(e.at)} ·{" "}
-                      {proj(e.projectId)?.name || tr(baseCap(e.kind))}
+                      {proj(e.projectId)?.name ||
+                        tr(
+                          { task: "Task", reminder: "Reminder", milestone: "Milestone", time: "Time" }[
+                            e.kind
+                          ],
+                        )}
                     </small>
                   </button>
                 ))}

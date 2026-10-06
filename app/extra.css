@@ -1447,7 +1447,7 @@ button.profile:hover b {
 .project:hover strong {
   color: #315bdb;
 }
-.reminder {
+.reminder:not(.calendar-event) {
   border-left: 0;
   border-right: 0;
   border-bottom: 0;
@@ -1458,7 +1458,7 @@ button.profile:hover b {
   color: inherit;
   cursor: pointer;
 }
-.reminder:hover > span {
+.reminder:not(.calendar-event):hover > span {
   color: #315bdb;
 }
 .back {
@@ -1711,4 +1711,8 @@ body {
   .search kbd {
     display: none;
   }
+}
+header .install-pill span {
+  color: inherit;
+  padding: 0;
 }
