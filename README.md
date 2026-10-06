@@ -67,3 +67,9 @@ lib/
   storage.ts         localStorage load / save
   i18n.ts            Chinese translations for interface text
 ```
+
+## License · 许可证
+
+[MIT](LICENSE). Free to use, modify and share; please keep the copyright notice.
+
+MIT 协议：可以自由使用、修改和分发，请保留版权声明。
